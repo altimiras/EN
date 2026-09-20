@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Enlaces y Recursos</title>
+    <meta name="theme-color" content="#0f172a">
     <style>
         :root {
-            --bg-color: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-main: #2c3e50;
-            --text-muted: #6c757d;
-            --primary-color: #2563eb;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary-color: #38bdf8;
+            --border-color: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
             --radius: 12px;
         }
 
@@ -39,7 +42,7 @@
         header h1 {
             font-size: 2.25rem;
             margin-bottom: 0.5rem;
-            color: #1e293b;
+            color: var(--text-main);
         }
 
         header p {
@@ -56,8 +59,8 @@
             font-size: 1.5rem;
             margin-bottom: 1.25rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
-            color: #1e293b;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--text-main);
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -75,19 +78,20 @@
             border-radius: var(--radius);
             padding: 1.5rem;
             box-shadow: var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 1px solid #edf2f7;
+            border: 1px solid var(--border-color);
         }
 
         .card:hover {
             transform: translateY(-4px);
+            background-color: var(--card-hover);
             box-shadow: var(--shadow-hover);
-            border-color: #cbd5e1;
+            border-color: var(--primary-color);
         }
 
         .card-header {
@@ -226,4 +230,4 @@
     </footer>
 
 </body>
-          </html>
+</html>
