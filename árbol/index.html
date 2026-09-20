@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Árbol de Enlaces - Portal</title>
+    <meta name="theme-color" content="#0f172a">
     <style>
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --primary-color: #10b981; /* Verde esmeralda para diferenciarlo */
-            --primary-bg: #ecfdf5;
-            --border-color: #e2e8f0;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary-color: #f97316; /* Tono naranja rojizo cálido */
+            --primary-bg: #2d1a17;   /* Fondo suave en sintonía con el tono rojizo/naranja */
+            --primary-hover: #ea580c;
+            --border-color: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
             --radius: 12px;
         }
 
@@ -36,23 +38,27 @@
             margin: 0 auto;
         }
 
+        /* Botón superior con temática naranja/rojiza */
         .nav-back {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--primary-color);
+            color: #fb923c;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
-            padding: 0.4rem 0.8rem;
+            padding: 0.5rem 1rem;
             background-color: var(--primary-bg);
-            border-radius: 6px;
-            transition: background-color 0.2s ease;
+            border: 1px solid #7c2d12;
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
 
         .nav-back:hover {
-            background-color: #d1fae5;
+            background-color: #431407;
+            color: #ffedd5;
+            border-color: var(--primary-color);
         }
 
         header {
@@ -105,8 +111,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            padding: 0.5rem 0.85rem;
-            background-color: #f1f5f9;
+            padding: 0.55rem 0.9rem;
+            background-color: #334155;
             border: 1px solid var(--border-color);
             border-radius: 20px;
             color: var(--text-main);
