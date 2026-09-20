@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Enlaces y Recursos</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #6c757d;
+            --primary-color: #2563eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #edf2f7;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: #cbd5e1;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-icon {
+            font-size: 1.75rem;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: 1.25rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portal de Recursos</h1>
+        <p>Selecciona una categoría para explorar sus enlaces y herramientas</p>
+    </header>
+
+    <main class="container">
+
+        <!-- CATEGORÍA 1: Herramientas -->
+        <h2 class="section-title">🛠️ Herramientas Web</h2>
+        <section class="grid">
+            <a href="./herramientas/index.html" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">🧰</span>
+                        <h2>Utilitarios</h2>
+                    </div>
+                    <p>Acceso a conversores, generadores y herramientas en línea.</p>
+                </div>
+                <div class="card-footer">Explorar directorio &rarr;</div>
+            </a>
+
+            <a href="./herramientas-desarrollo/index.html" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">💻</span>
+                        <h2>Desarrollo</h2>
+                    </div>
+                    <p>Entornos, validadores de código y recursos técnicos.</p>
+                </div>
+                <div class="card-footer">Explorar directorio &rarr;</div>
+            </a>
+        </section>
+
+
+        <!-- CATEGORÍA 2: Árboles Web -->
+        <h2 class="section-title">🌳 Árboles de Enlaces</h2>
+        <section class="grid">
+            <a href="./arbol-personal/index.html" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">👤</span>
+                        <h2>Enlaces Personales</h2>
+                    </div>
+                    <p>Árbol principal de perfiles, redes sociales y contacto.</p>
+                </div>
+                <div class="card-footer">Abrir árbol &rarr;</div>
+            </a>
+
+            <a href="./arbol-proyectos/index.html" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">📁</span>
+                        <h2>Árbol de Proyectos</h2>
+                    </div>
+                    <p>Colección estructurada de repositorios y proyectos activos.</p>
+                </div>
+                <div class="card-footer">Abrir árbol &rarr;</div>
+            </a>
+        </section>
+
+
+        <!-- CATEGORÍA 3: Temas Específicos -->
+        <h2 class="section-title">📚 Páginas Temáticas</h2>
+        <section class="grid">
+            <a href="./tema-musica/index.html" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">🎵</span>
+                        <h2>Música & Audio</h2>
+                    </div>
+                    <p>Colección de sitios sobre teoría musical, sintetizadores y audio.</p>
+                </div>
+                <div class="card-footer">Ver tema &rarr;</div>
+            </a>
+
+            <a href="./tema-historia/index.html" class="card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-icon">📖</span>
+                        <h2>Historia & Archivos</h2>
+                    </div>
+                    <p>Documentos, sitios de historia y carpetas de investigación.</p>
+                </div>
+                <div class="card-footer">Ver tema &rarr;</div>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Portal de Enlaces — Organizado por carpetas</p>
+    </footer>
+
+</body>
+          </html>
